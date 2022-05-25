@@ -1,0 +1,25 @@
+https://youtu.be/yNolUEBE3Wc
+Web Database Applications With Php And MySQL
+
+-connect.php
+連接檔案去database.
+
+-delete.php
+從database中刪除檔案.
+
+-goals.css
+美化index.php 頁面所有東西.
+
+-insert_goal.php
+加入資料到database.
+
+
+$text --> 就是php variables
+
+　$conn = new mysqli('localhost', 'user', 'password','data_base');　　//要使用new操作符，最后一个参数是直接指定数据库
+　　//假如构造时候不指定，那下一句需要$conn -> select_db('data_base')实现
+　　$result = $conn -> query( 'select * from data_base' );
+　　$row = $result -> fetch_row(); //取一行数据
+　　echo row[0]; //输出第一个字段的值
+　　使用new mysqli('localhost', usenamer', 'password', 'databasename');会报错，提示如下：
+　　Fatal error: Class 'mysqli' not found in ...
